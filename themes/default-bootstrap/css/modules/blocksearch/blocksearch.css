@@ -1,5 +1,10 @@
 #search_block_top {
-  padding-top: 50px; }
+  padding-top: 35px; 
+  float: right;
+  padding-right: 23px;
+  width: 352px;
+  padding-left: 0;
+}
   #search_block_top #searchbox {
     float: left;
     width: 100%; }
@@ -13,7 +18,7 @@
     color: #fff;
     width: 50px;
     text-align: center;
-    padding: 10px 0 11px 0; }
+    padding: 3px 0 6px 0; }
     #search_block_top .btn.button-search span {
       display: none; }
     #search_block_top .btn.button-search:before {
@@ -28,7 +33,7 @@
   #search_block_top #search_query_top {
     display: inline;
     padding: 13px 60px 13px 13px;
-    height: 45px;
+    height: 33px;
     background: #fbfbfb;
     margin-right: 1px; }
 

@@ -68,16 +68,11 @@
 				<p>{l s='You cannot place a new order from your country.'}{if isset($geolocation_country) && $geolocation_country} <span class="bold">{$geolocation_country|escape:'html':'UTF-8'}</span>{/if}</p>
 			</div>
 		{/if}
+                <div class="border-top"></div>
 		<div id="page">
 			<div class="header-container">
 				<header id="header">
-					<div class="banner">
-						<div class="container">
-							<div class="row">
-								{hook h="displayBanner"}
-							</div>
-						</div>
-					</div>
+
 					<div class="nav">
 						<div class="container">
 							<div class="row">
@@ -94,6 +89,11 @@
 									</a>
 								</div>
 								{if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
+                                                                <div class="block-link-cart">
+                                                                    <a href="#" title="view cart">
+                                                                        Consultez votre Panier 
+                                                                    </a>
+                                                                </div>
 							</div>
 						</div>
 					</div>

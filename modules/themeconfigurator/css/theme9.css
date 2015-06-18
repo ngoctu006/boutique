@@ -1,13 +1,11 @@
 body {
-  background: #282828;
 }
 
 .header-container, .columns-container {
-  background: url(../img/bg-theme8.jpg) repeat 50% 0;
 }
 
 #header {
-  background: url(../img/bg-theme8.jpg) repeat 50% 0;
+  /* background: url(../img/bg-theme8.jpg) repeat 50% 0; */
 }
 #header #nav-row {
   background: #333333;
@@ -52,7 +50,7 @@ body {
   color: white;
 }
 #header #search_block_top .btn.button-search {
-  background: #eea200;
+  background: #a0cf67;
   text-shadow: 0 1px #b57b00;
 }
 #header #search_block_top .btn.button-search:hover {
@@ -61,8 +59,8 @@ body {
   text-shadow: 0 1px #333;
 }
 #header #search_block_top #search_query_top {
-  border-color: #e2dec8;
-  background: rgba(248, 248, 248, 0.63);
+  border-color: #a0cf67;
+  background: #fff;
   color: #686666;
 }
 #header #header_user #shopping_cart a {
