@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/var/www/html/prestashop16/classes/log/AbstractLogger.php</file>
+            <file>file:/var/www/html/prestashop16/classes/CSV.php</file>
+            <file>file:/var/www/html/prestashop16/index.php</file>
+            <file>file:/var/www/html/prestashop16/classes/FileUploader.php</file>
+            <file>file:/var/www/html/prestashop16/classes/db/DbMySQLi.php</file>
+            <file>file:/var/www/html/prestashop16/classes/db/MySQL.php</file>
+            <file>file:/var/www/html/prestashop16/import/Articles.csv</file>
+            <file>file:/var/www/html/prestashop16/importproduct.php</file>
+            <file>file:/var/www/html/prestashop16/classes/db/index.php</file>
+            <file>file:/var/www/html/prestashop16/classes/stock/Stock.php</file>
+            <file>file:/var/www/html/prestashop16/classes/db/DbQuery.php</file>
+            <file>file:/var/www/html/prestashop16/controllers/admin/AdminImportController.php</file>
+            <file>file:/var/www/html/prestashop16/classes/Customer.php</file>
+            <file>file:/var/www/html/prestashop16/classes/Product.php</file>
+            <file>file:/var/www/html/prestashop16/classes/db/DbPDO.php</file>
+            <file>file:/var/www/html/prestashop16/classes/log/FileLogger.php</file>
+            <file>file:/var/www/html/prestashop16/classes/stock/StockAvailable.php</file>
+            <file>file:/var/www/html/prestashop16/classes/db/Db.php</file>
+        </group>
+    </open-files>
+</project-private>
