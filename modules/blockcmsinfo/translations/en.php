@@ -5,7 +5,6 @@ $_MODULE = array();
 
 $_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_988659f6c5d3210a3f085ecfecccf5d3'] = 'Custom CMS information block';
 $_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_cd4abd29bdc076fb8fabef674039cd6e'] = 'Adds custom information blocks in your store.';
-$_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_666f6333e43c215212b916fef3d94af0'] = 'You must fill in all fields.';
 $_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_86432715902fbaf53de469fed3fa6c53'] = 'You have to select at least one shop.';
 $_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_d52eaeff31af37a4a7e0550008aff5df'] = 'An error occurred while attempting to save.';
 $_MODULE['<{blockcmsinfo}prestashop>blockcmsinfo_6f16c729fadd8aa164c6c47853983dd2'] = 'New custom CMS block';

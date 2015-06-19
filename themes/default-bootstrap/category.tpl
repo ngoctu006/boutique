@@ -26,7 +26,7 @@
 {if isset($category)}
 	{if $category->id AND $category->active}
     	{if $scenes || $category->description || $category->id_image}
-			<div class="content_scene_cat">
+	{*<div class="content_scene_cat">
             	 {if $scenes}
                  	<div class="content_scene">
                         <!-- Scenes -->
@@ -67,52 +67,52 @@
                         {/if}
                      </div>
                   {/if}
-            </div>
+            </div>*}
 		{/if}
-		<h1 class="page-heading{if (isset($subcategories) && !$products) || (isset($subcategories) && $products) || !isset($subcategories) && $products} product-listing{/if}"><span class="cat-name">{$category->name|escape:'html':'UTF-8'}{if isset($categoryNameComplement)}&nbsp;{$categoryNameComplement|escape:'html':'UTF-8'}{/if}</span>{include file="$tpl_dir./category-count.tpl"}</h1>
-		{if isset($subcategories)}
-        {if (isset($display_subcategories) && $display_subcategories eq 1) || !isset($display_subcategories) }
-		<!-- Subcategories -->
-		<div id="subcategories">
-			<p class="subcategory-heading">{l s='Subcategories'}</p>
-			<ul class="clearfix">
-			{foreach from=$subcategories item=subcategory}
-				<li>
-                	<div class="subcategory-image">
-						<a href="{$link->getCategoryLink($subcategory.id_category, $subcategory.link_rewrite)|escape:'html':'UTF-8'}" title="{$subcategory.name|escape:'html':'UTF-8'}" class="img">
-						{if $subcategory.id_image}
-							<img class="replace-2x" src="{$link->getCatImageLink($subcategory.link_rewrite, $subcategory.id_image, 'medium_default')|escape:'html':'UTF-8'}" alt="" width="{$mediumSize.width}" height="{$mediumSize.height}" />
-						{else}
-							<img class="replace-2x" src="{$img_cat_dir}{$lang_iso}-default-medium_default.jpg" alt="" width="{$mediumSize.width}" height="{$mediumSize.height}" />
-						{/if}
-					</a>
-                   	</div>
-					<h5><a class="subcategory-name" href="{$link->getCategoryLink($subcategory.id_category, $subcategory.link_rewrite)|escape:'html':'UTF-8'}">{$subcategory.name|truncate:25:'...'|escape:'html':'UTF-8'}</a></h5>
-					{if $subcategory.description}
-						<div class="cat_desc">{$subcategory.description}</div>
-					{/if}
-				</li>
-			{/foreach}
-			</ul>
-		</div>
-        {/if}
-		{/if}
+		<h1 class="page-heading{if (isset($subcategories) && !$products) || (isset($subcategories) && $products) || !isset($subcategories) && $products} product-listing{/if}"><span class="cat-name">{$category->name|escape:'html':'UTF-8'}{if isset($categoryNameComplement)}&nbsp;{$categoryNameComplement|escape:'html':'UTF-8'}{/if}</span></h1>
+		{*{if isset($subcategories)}
+                     {if (isset($display_subcategories) && $display_subcategories eq 1) || !isset($display_subcategories) }
+                       <!-- Subcategories -->
+                       <div id="subcategories">
+                               <p class="subcategory-heading">{l s='Subcategories'}</p>
+                               <ul class="clearfix">
+                               {foreach from=$subcategories item=subcategory}
+                                       <li>
+                               <div class="subcategory-image">
+                                                       <a href="{$link->getCategoryLink($subcategory.id_category, $subcategory.link_rewrite)|escape:'html':'UTF-8'}" title="{$subcategory.name|escape:'html':'UTF-8'}" class="img">
+                                                       {if $subcategory.id_image}
+                                                               <img class="replace-2x" src="{$link->getCatImageLink($subcategory.link_rewrite, $subcategory.id_image, 'medium_default')|escape:'html':'UTF-8'}" alt="" width="{$mediumSize.width}" height="{$mediumSize.height}" />
+                                                       {else}
+                                                               <img class="replace-2x" src="{$img_cat_dir}{$lang_iso}-default-medium_default.jpg" alt="" width="{$mediumSize.width}" height="{$mediumSize.height}" />
+                                                       {/if}
+                                               </a>
+                               </div>
+                                               <h5><a class="subcategory-name" href="{$link->getCategoryLink($subcategory.id_category, $subcategory.link_rewrite)|escape:'html':'UTF-8'}">{$subcategory.name|truncate:25:'...'|escape:'html':'UTF-8'}</a></h5>
+                                               {if $subcategory.description}
+                                                       <div class="cat_desc">{$subcategory.description}</div>
+                                               {/if}
+                                       </li>
+                               {/foreach}
+                               </ul>
+                       </div>
+                    {/if}
+                {/if}*}
 		{if $products}
 			<div class="content_sortPagiBar clearfix">
-            	<div class="sortPagiBar clearfix">
-            		{include file="./product-sort.tpl"}
-                	{include file="./nbr-product-page.tpl"}
-				</div>
-                <div class="top-pagination-content clearfix">
-                	{include file="./product-compare.tpl"}
-					{include file="$tpl_dir./pagination.tpl"}
-                </div>
+                            <div class="sortPagiBar clearfix">
+                                {include file="./product-sort.tpl"}
+                                {include file="./nbr-product-page.tpl"}
+                            </div>
+                            <div class="top-pagination-content clearfix">
+                                {* include file="./product-compare.tpl" *}
+                                {include file="$tpl_dir./pagination.tpl"}
+                            </div>
 			</div>
 			{include file="./product-list.tpl" products=$products}
 			<div class="content_sortPagiBar">
 				<div class="bottom-pagination-content clearfix">
-					{include file="./product-compare.tpl" paginationId='bottom'}
-                    {include file="./pagination.tpl" paginationId='bottom'}
+                                   {* include file="./product-compare.tpl" paginationId='bottom' *}
+                                   {include file="./pagination.tpl" paginationId='bottom'}
 				</div>
 			</div>
 		{/if}
@@ -120,3 +120,18 @@
 		<p class="alert alert-warning">{l s='This category is currently unavailable.'}</p>
 	{/if}
 {/if}
+<script>
+    jQuery(document).ready(function(){
+            jQuery('.display-view li a').click(function(e){
+                e.preventDefault();
+                var id = jQuery(this).parent().attr("id");
+                if( id == "grid_1"){
+                    jQuery('.product_list').removeClass('list');
+                    jQuery('.product_list').addClass('grid');
+                }else{
+                    jQuery('.product_list').removeClass('grid');
+                    jQuery('.product_list').addClass('list');            
+                }
+            })
+    })
+</script>

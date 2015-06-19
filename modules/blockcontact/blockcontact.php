@@ -39,7 +39,7 @@ class Blockcontact extends Module
 		$this->bootstrap = true;
 		parent::__construct();	
 
-                    $this->displayName = $this->l('Contact block');
+		$this->displayName = $this->l('Contact block');
 		$this->description = $this->l('Allows you to add additional information about your store\'s customer service.');
 		$this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
 	}

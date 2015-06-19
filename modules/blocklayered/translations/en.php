@@ -5,6 +5,7 @@ $_MODULE = array();
 
 $_MODULE['<{blocklayered}prestashop>blocklayered_84241e458cdd5162745500a59a3680f3'] = 'Layered navigation block';
 $_MODULE['<{blocklayered}prestashop>blocklayered_2d08fa8e157fe3f1875402cbd98aee1b'] = 'Displays a block with layered navigation filters.';
+$_MODULE['<{blocklayered}prestashop>blocklayered_b15e7271053fe9dd22d80db100179085'] = 'This module need to be hooked in a column and your theme does not implement one';
 $_MODULE['<{blocklayered}prestashop>blocklayered_b3786b970611c1a3809dd51b630812a7'] = '"%s" is not a valid url';
 $_MODULE['<{blocklayered}prestashop>blocklayered_ccc12c5568381293a27db0232877937b'] = 'Filter template name required (cannot be empty)';
 $_MODULE['<{blocklayered}prestashop>blocklayered_8c97e587c1b4e519bec26f3903561da3'] = 'You must select at least one category.';
@@ -31,6 +32,7 @@ $_MODULE['<{blocklayered}prestashop>blocklayered_78a5eb43deef9a7b5b9ce157b9d52ac
 $_MODULE['<{blocklayered}prestashop>blocklayered_7edabf994b76a00cbc60c95af337db8f'] = 'weight';
 $_MODULE['<{blocklayered}prestashop>blocklayered_32d2e6cd4bb1719c572ef470a3a525b6'] = 'My template %s';
 $_MODULE['<{blocklayered}prestashop>blocklayered-no-products_5c9838becf9bbce28ba90a7426daf171'] = 'There are no products.';
+$_MODULE['<{blocklayered}prestashop>blocklayered_c32516babc5b6c47eb8ce1bfc223253c'] = 'Catalog';
 $_MODULE['<{blocklayered}prestashop>blocklayered_1262d1b9fbffb3a8e85ac9e4b449e989'] = 'Enabled filters:';
 $_MODULE['<{blocklayered}prestashop>blocklayered_ea4788705e6873b424c65e91c2846b19'] = 'Cancel';
 $_MODULE['<{blocklayered}prestashop>blocklayered_9b569fa0e7896f0e96164b954265eac5'] = '%1$s: %2$s - %3$s';
@@ -74,7 +76,6 @@ $_MODULE['<{blocklayered}prestashop>add_1.6_ee59f74265cd7f85d0ad30206a1a89b0'] =
 $_MODULE['<{blocklayered}prestashop>add_1.6_7d06fc6f3166570e5d8995088066c0a2'] = 'Feature: %1$s (%2$d values)';
 $_MODULE['<{blocklayered}prestashop>add_1.6_57d6fd5e5b9c215d6edac66b67e65773'] = 'Feature: %1$s (%2$d value)';
 $_MODULE['<{blocklayered}prestashop>add_1.6_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
-$_MODULE['<{blocklayered}prestashop>add_1.6_ea4788705e6873b424c65e91c2846b19'] = 'Cancel';
 $_MODULE['<{blocklayered}prestashop>add_1.6_18c6120643596bd2626f3b0720b1df3a'] = 'You must select at least one category';
 $_MODULE['<{blocklayered}prestashop>add_1.6_dc3f85827350641490287c65c0c4ddf8'] = 'You must select at least one filter';
 $_MODULE['<{blocklayered}prestashop>add_254f642527b45bc260048e30704edb39'] = 'Configuration';
@@ -108,7 +109,6 @@ $_MODULE['<{blocklayered}prestashop>add_ee59f74265cd7f85d0ad30206a1a89b0'] = 'Th
 $_MODULE['<{blocklayered}prestashop>add_7d06fc6f3166570e5d8995088066c0a2'] = 'Feature: %1$s (%2$d values)';
 $_MODULE['<{blocklayered}prestashop>add_57d6fd5e5b9c215d6edac66b67e65773'] = 'Feature: %1$s (%2$d value)';
 $_MODULE['<{blocklayered}prestashop>add_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
-$_MODULE['<{blocklayered}prestashop>add_ea4788705e6873b424c65e91c2846b19'] = 'Cancel';
 $_MODULE['<{blocklayered}prestashop>add_18c6120643596bd2626f3b0720b1df3a'] = 'You must select at least one category';
 $_MODULE['<{blocklayered}prestashop>add_dc3f85827350641490287c65c0c4ddf8'] = 'You must select at least one filter';
 $_MODULE['<{blocklayered}prestashop>add_841458c43f0de2d163857cb64435b767'] = 'Selected filters: %s';
@@ -137,7 +137,7 @@ $_MODULE['<{blocklayered}prestashop>view_1.6_af1b98adf7f686b84cd0b443e022b7a0'] 
 $_MODULE['<{blocklayered}prestashop>view_1.6_f7f19392da30e81c3abf433ce7b8ca38'] = 'Created on';
 $_MODULE['<{blocklayered}prestashop>view_1.6_06df33001c1d7187fdd81ea1f5b277aa'] = 'Actions';
 $_MODULE['<{blocklayered}prestashop>view_1.6_7dce122004969d56ae2e0245cb754d35'] = 'Edit';
-$_MODULE['<{blocklayered}prestashop>view_1.6_eb0728df77683ac0f7210ed0d4a18d62'] = 'Do you really want to delete this filter template?';
+$_MODULE['<{blocklayered}prestashop>view_1.6_7761b816560ae2618f40143bf3e585c8'] = 'Do you really want to delete this filter template';
 $_MODULE['<{blocklayered}prestashop>view_1.6_f2a6c498fb90ee345d997f888fce3b18'] = 'Delete';
 $_MODULE['<{blocklayered}prestashop>view_1.6_058eeeba77f547f8a9a295a0efd4f6cd'] = 'No filter template found.';
 $_MODULE['<{blocklayered}prestashop>view_1.6_ae2b83a081959fff7ab2e96f4ce972d1'] = 'Add new template';
@@ -275,7 +275,6 @@ $_MODULE['<{blocklayered}prestashop>feature_value_form_a6c8c88e5e16cba7b9d65ca76
 $_MODULE['<{blocklayered}prestashop>feature_value_form_28034a200e932f22b324a4dda1bb9f64'] = 'Invalid characters: <>;=#{}_';
 $_MODULE['<{blocklayered}prestashop>feature_value_form_9e11e4b371570340ca07913bc4783a7a'] = 'Meta title';
 $_MODULE['<{blocklayered}prestashop>feature_value_form_26029c4864b0b6843acfe55ee14ba807'] = 'When the Layered Navigation Block module is enabled, you can get more detailed page titles by choosing the word that best represent this feature\'s value. By default, PrestaShop uses the value\'s name, but you can change that setting using this field.';
-$_MODULE['<{blocklayered}prestashop>blocklayered_c32516babc5b6c47eb8ce1bfc223253c'] = 'Catalog';
 
 
 return $_MODULE;

@@ -23,10 +23,15 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 {if isset($orderby) AND isset($orderway)}
-<ul class="display hidden-xs">
-	<li class="display-title">{l s='View:'}</li>
+{*<ul class="display hidden-xs">
+    <li class="display-title">{l s='View:'}</li>
     <li id="grid"><a rel="nofollow" href="#" title="{l s='Grid'}"><i class="icon-th-large"></i>{l s='Grid'}</a></li>
     <li id="list"><a rel="nofollow" href="#" title="{l s='List'}"><i class="icon-th-list"></i>{l s='List'}</a></li>
+</ul>*}
+<ul class="display-view">
+    <li class="display-title">{l s='View:'}</li>
+    <li id="grid_1"><a rel="nofollow" href="#" title="{l s='Grid'}"><i class="icon-th-large"></i>{l s='Grid'}</a></li>
+    <li id="list_1"><a rel="nofollow" href="#" title="{l s='List'}"><i class="icon-th-list"></i>{l s='List'}</a></li>
 </ul>
 {* On 1.5 the var request is setted on the front controller. The next lines assure the retrocompatibility with some modules *}
 {if !isset($request)}
@@ -42,10 +47,10 @@
 	{/if}
 {/if}
 {if $page_name == 'best-sales' && (!isset($smarty.get.orderby) || empty($smarty.get.orderby))}{$orderby = ''}{$orderbydefault = ''}{/if}
-<form id="productsSortForm{if isset($paginationId)}_{$paginationId}{/if}" action="{$request|escape:'html':'UTF-8'}" class="productsSortForm">
+<form id="productsSortForms{if isset($paginationId)}_{$paginationId}{/if}" action="{$request|escape:'html':'UTF-8'}" class="productsSortForm">
 	<div class="select selector1">
 		<label for="selectProductSort{if isset($paginationId)}_{$paginationId}{/if}">{l s='Sort by'}</label>
-		<select id="selectProductSort{if isset($paginationId)}_{$paginationId}{/if}" class="selectProductSort form-control">
+		<select>
 			<option value="{if $page_name != 'best-sales'}{$orderbydefault|escape:'html':'UTF-8'}:{$orderwaydefault|escape:'html':'UTF-8'}{/if}"{if $orderby eq $orderbydefault} selected="selected"{/if}>--</option>
 			{if !$PS_CATALOG_MODE}
 				<option value="price:asc"{if $orderby eq 'price' AND $orderway eq 'asc'} selected="selected"{/if}>{l s='Price: Lowest first'}</option>

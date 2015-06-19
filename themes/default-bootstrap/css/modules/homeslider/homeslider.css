@@ -4,7 +4,6 @@
 #homepage-slider {
   padding-left: 0;
   padding-right: 0;
-  margin-bottom: 14px;
   max-width: 100%;
   max-height: 100%;
   overflow: hidden;
@@ -14,11 +13,7 @@
   /*****************************************************************************
   						BXSlider Styles
   ********************************************************************************/ }
-  @media (max-width: 767px) {
-    #homepage-slider {
-      width: 100%;
-      max-width: 100%;
-      padding-top: 20px; } }
+
   #homepage-slider #homeslider {
     margin: 0 auto;
     padding: 0; }
@@ -48,22 +43,6 @@
     #homepage-slider .homeslider-description button {
       font-size: 1.2em;
       text-transform: uppercase; }
-    @media (max-width: 1200px) {
-      #homepage-slider .homeslider-description {
-        padding: 20px;
-        font-size: 0.8em; } }
-    @media (max-width: 768px) {
-      #homepage-slider .homeslider-description {
-        padding: 30px;
-        font-size: 0.7em; }
-        #homepage-slider .homeslider-description p {
-          font-size: 1.5em; } }
-    @media (max-width: 480px) {
-      #homepage-slider .homeslider-description {
-        padding: 30px;
-        font-size: 0.5em; }
-        #homepage-slider .homeslider-description p {
-          font-size: 1.7em; } }
   #homepage-slider .bx-wrapper a {
     display: block; }
   #homepage-slider .bx-wrapper img {

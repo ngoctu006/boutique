@@ -186,7 +186,7 @@
 			</ul>
 		{/if}
 	</div>
-    <div class="product-count">
+{*    <div class="product-count">
     	{if ($n*$p) < $nb_products }
     		{assign var='productShowing' value=$n*$p}
         {else}
@@ -202,6 +202,6 @@
 		{else}
         	{l s='Showing %1$d - %2$d of 1 item' sprintf=[$productShowingStart, $productShowing]}
        	{/if}
-    </div>
+    </div>*}
 	<!-- /Pagination -->
 {/if}

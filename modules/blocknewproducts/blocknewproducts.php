@@ -133,11 +133,15 @@ class BlockNewProducts extends Module
 		return parent::getCacheId($name.'|'.date('Ymd'));
 	}
 
+
 	public function hookLeftColumn($params)
 	{
 		return $this->hookRightColumn($params);
 	}
-
+	public function hookHome($params)
+	{
+		return $this->hookRightColumn($params);
+	}
 	public function hookdisplayHomeTab($params)
 	{
 		if (!$this->isCached('tab.tpl', $this->getCacheId('blocknewproducts-tab')))

@@ -24,15 +24,20 @@
 *}
 <!-- MODULE Block new products -->
 <div id="new-products_block_right" class="block products_block">
-	<h4 class="title_block">
-    	<a href="{$link->getPageLink('new-products')|escape:'html'}" title="{l s='New products' mod='blocknewproducts'}">{l s='New products' mod='blocknewproducts'}</a>
-    </h4>
+	<h4 class="title_block st-title1">
+            {*    	<a href="{$link->getPageLink('new-products')|escape:'html'}" title="{l s='New products' mod='blocknewproducts'}">{l s='New products' mod='blocknewproducts'}</a>
+            *}    
+            <span>{l s='Nouveautes' mod='blocknewproducts'}</span>
+        </h4>
     <div class="block_content products-block">
         {if $new_products !== false}
-            <ul class="products">
+            <ul class="products grid">
+                {assign var='item' value=1}
                 {foreach from=$new_products item=newproduct name=myLoop}
-                    <li class="clearfix">
-                        <a class="products-block-image" href="{$newproduct.link|escape:'html'}" title="{$newproduct.legend|escape:html:'UTF-8'}"><img class="replace-2x img-responsive" src="{$link->getImageLink($newproduct.link_rewrite, $newproduct.id_image, 'small_default')|escape:'html'}" alt="{$newproduct.name|escape:html:'UTF-8'}" /></a>
+                    <li {if $item % 3 == 0} class="nomargin" {/if}>
+                        <a class="products-block-image" href="{$newproduct.link|escape:'html'}" title="{$newproduct.legend|escape:html:'UTF-8'}">
+                            <img class="replace-2x img-responsive" src="{$link->getImageLink($newproduct.link_rewrite, $newproduct.id_image, 'small_default')|escape:'html'}" alt="{$newproduct.name|escape:html:'UTF-8'}" />
+                        </a>
                         <div class="product-content">
                         	<h5>
                             	<a class="product-name" href="{$newproduct.link|escape:'html'}" title="{$newproduct.name|escape:html:'UTF-8'}">{$newproduct.name|strip_tags|escape:html:'UTF-8'}</a>
@@ -40,20 +45,39 @@
                         	<p class="product-description">{$newproduct.description_short|strip_tags:'UTF-8'|truncate:75:'...'}</p>
                             {if (!$PS_CATALOG_MODE AND ((isset($newproduct.show_price) && $newproduct.show_price) || (isset($newproduct.available_for_order) && $newproduct.available_for_order)))}
                             	{if isset($newproduct.show_price) && $newproduct.show_price && !isset($restricted_country_mode)}
-                                    <div class="price-box">
-                                        <span class="price">
-                                        	{if !$priceDisplay}{convertPrice price=$newproduct.price}{else}{convertPrice price=$newproduct.price_tax_exc}{/if}
-                                        </span>
+                                    <div class="block-price-cart">
+                                        <div class="price-box">
+                                            <span class="price">
+                                                    {if !$priceDisplay}{convertPrice price=$newproduct.price}{else}{convertPrice price=$newproduct.price_tax_exc}{/if}
+                                            </span>
+                                        </div>
+                                        <div class="button-container">
+						{if ($newproduct.id_product_attribute == 0 || 
+                                                    (isset($add_prod_display) && ($add_prod_display == 1))) &&
+                                                     $newproduct.available_for_order && !isset($restricted_country_mode) && 
+                                                     $newproduct.customizable != 2 && !$PS_CATALOG_MODE}
+							{if (!isset($newproduct.customization_required) || 
+                                                             !$newproduct.customization_required) && 
+                                                             ($newproduct.allow_oosp || $newproduct.quantity > 0)}
+                                                                {capture}add=1&amp;id_product={$newproduct.id_product|intval}{if isset($static_token)}&amp;token={$static_token}{/if}{/capture}
+								<a class="button ajax_add_to_cart_button btn btn-default" href="{$link->getPageLink('cart', true, NULL, $smarty.capture.default, false)|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Add to cart'}" data-id-product="{$newproduct.id_product|intval}" data-minimal_quantity="{if isset($newproduct.product_attribute_minimal_quantity) && $newproduct.product_attribute_minimal_quantity > 1}{$newproduct.product_attribute_minimal_quantity|intval}{else}{$newproduct.minimal_quantity|intval}{/if}">
+									<span>{l s='Add to cart'}</span>
+								</a>
+							{else}
+								<span class="button ajax_add_to_cart_button btn btn-default disabled">
+									<span>{l s='Add to cart'}</span>
+								</span>
+							{/if}
+						{/if}
+					</div>    
                                     </div>
                                 {/if}
                             {/if}
                         </div>
                     </li>
+                    {$item = $item+1}
                 {/foreach}
             </ul>
-            <div>
-                <a href="{$link->getPageLink('new-products')|escape:'html'}" title="{l s='All new products' mod='blocknewproducts'}" class="btn btn-default button button-small"><span>{l s='All new products' mod='blocknewproducts'}<i class="icon-chevron-right right"></i></span></a>
-            </div>
         {else}
         	<p>&raquo; {l s='Do not allow new products at this time.' mod='blocknewproducts'}</p>
         {/if}
