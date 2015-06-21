@@ -57,15 +57,17 @@
 						{/if}
 					{/foreach}
 				{/if}
-				<select>
-					{assign var="lastnValue" value="0"}
-					{foreach from=$nArray item=nValue}
-						{if $lastnValue <= $nb_products}
-							<option value="{$nValue|escape:'html':'UTF-8'}" {if $n == $nValue}selected="selected"{/if}>{$nValue|escape:'html':'UTF-8'}</option>
-						{/if}
-						{assign var="lastnValue" value=$nValue}
-					{/foreach}
-				</select>
+                                <div class="styled-select">
+                                    <select>
+                                            {assign var="lastnValue" value="0"}
+                                            {foreach from=$nArray item=nValue}
+                                                    {if $lastnValue <= $nb_products}
+                                                            <option value="{$nValue|escape:'html':'UTF-8'}" {if $n == $nValue}selected="selected"{/if}>{$nValue|escape:'html':'UTF-8'}</option>
+                                                    {/if}
+                                                    {assign var="lastnValue" value=$nValue}
+                                            {/foreach}
+                                    </select>
+                                </div>
 			</div>
 		</form>
 	{/if}
