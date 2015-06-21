@@ -117,4 +117,7 @@ button#submitMessage {
 .wrap-discription p{
     color:#000;
 }
+#contact .fancybox-inner{
+    height: 480px !important;
+}
 /*# sourceMappingURL=contact-form.css.map */

@@ -93,6 +93,8 @@ class BlockFacebook extends Module
 	}
 	public function hookDisplayTopFooter()
 	{
+                if ($this->page_name !== 'index')
+			$this->_assignMedia();
 		return $this->hookDisplayHome();
 	}
 

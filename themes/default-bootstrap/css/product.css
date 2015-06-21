@@ -32,6 +32,8 @@ a.fancybox-nav {
   cursor: pointer;
   border: 1px solid #ffd203;
   background: #fff;
+  border-radius: 5px;
+    overflow: hidden;
 }
 
   .pb-left-column #image-block img {

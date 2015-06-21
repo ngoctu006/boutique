@@ -26,5 +26,9 @@
 
 #login_form .form-control, #create-account_form .form-control {
   max-width: 271px; }
+#wrap-bloc-form > div{
+    float: left;
+    width: 410px;
+}
 
 /*# sourceMappingURL=authentication.css.map */

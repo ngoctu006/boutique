@@ -191,3 +191,10 @@
   border-radius: 10px;
   font-size: 20px;
 }
+
+#categories_block_left li li.last {
+padding-bottom: 20px;
+}
+ul.display-view li.display-title{
+    color:#000;
+}

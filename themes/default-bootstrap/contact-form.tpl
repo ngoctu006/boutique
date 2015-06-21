@@ -29,11 +29,11 @@
 <p>{l s="Contactez nous pour toutes demandes d'informations sur les produits, les paiements, la livraison..."}</p>
  <div class="wrap-discription">
     <div class="map">
-        <img src="{$base_dir}/images/map.png">
+        <a class="fancybox fancybox.iframe" href="{$base_dir}/map.html"> <img src="{$base_dir}/images/map.png"></a>
     </div>
     <div class="discription-contact">
         <h5>Voici nos coordonnées : </h5>
-          <p><span>Boutique Nounou ZA de Kervandras </span>
+          <p><span>Boutique Nounou ZA de Kervandras </span><br/>
             <span>56250 Sulniac </span><br/>
             <span>Morbihan - France</span><br/>
             <span>info@boutique-nounou.com</span><br/>
@@ -118,3 +118,12 @@
 {/if}
 {addJsDefL name='contact_fileDefaultHtml'}{l s='No file selected' js=1}{/addJsDefL}
 {addJsDefL name='contact_fileButtonHtml'}{l s='Choose File' js=1}{/addJsDefL}
+<script>
+     $(document).ready(function() {
+	$('.fancybox').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		height: '450'
+	});
+    });
+</script>

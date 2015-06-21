@@ -49,7 +49,7 @@
 		</ol>
 	</div>
 	{/if}-->
-	<div class="row">
+	<div class="row" id="wrap-bloc-form">
 		<div class="col-xs-12 col-sm-6">
 			<form action="{$link->getPageLink('authentication', true)|escape:'html':'UTF-8'}" method="post" id="create-account_form" class="box">
 				<h3 class="page-subheading">{l s='Create an account'}</h3>

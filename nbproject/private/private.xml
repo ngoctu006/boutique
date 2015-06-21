@@ -4,24 +4,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/var/www/html/prestashop16/classes/log/AbstractLogger.php</file>
-            <file>file:/var/www/html/prestashop16/classes/CSV.php</file>
-            <file>file:/var/www/html/prestashop16/index.php</file>
-            <file>file:/var/www/html/prestashop16/classes/FileUploader.php</file>
-            <file>file:/var/www/html/prestashop16/classes/db/DbMySQLi.php</file>
-            <file>file:/var/www/html/prestashop16/classes/db/MySQL.php</file>
-            <file>file:/var/www/html/prestashop16/import/Articles.csv</file>
-            <file>file:/var/www/html/prestashop16/importproduct.php</file>
-            <file>file:/var/www/html/prestashop16/classes/db/index.php</file>
-            <file>file:/var/www/html/prestashop16/classes/stock/Stock.php</file>
-            <file>file:/var/www/html/prestashop16/classes/db/DbQuery.php</file>
-            <file>file:/var/www/html/prestashop16/controllers/admin/AdminImportController.php</file>
-            <file>file:/var/www/html/prestashop16/classes/Customer.php</file>
-            <file>file:/var/www/html/prestashop16/classes/Product.php</file>
-            <file>file:/var/www/html/prestashop16/classes/db/DbPDO.php</file>
-            <file>file:/var/www/html/prestashop16/classes/log/FileLogger.php</file>
-            <file>file:/var/www/html/prestashop16/classes/stock/StockAvailable.php</file>
-            <file>file:/var/www/html/prestashop16/classes/db/Db.php</file>
+            <file>file:/var/www/html/prestashop16/themes/default-bootstrap/css/product_list.css</file>
+            <file>file:/var/www/html/prestashop16/themes/default-bootstrap/pagination.tpl</file>
+            <file>file:/var/www/html/prestashop16/themes/default-bootstrap/product-list.tpl</file>
+            <file>file:/var/www/html/prestashop16/themes/default-bootstrap/css/global.css</file>
+            <file>file:/var/www/html/prestashop16/themes/default-bootstrap/product-sort.tpl</file>
+            <file>file:/var/www/html/prestashop16/themes/default-bootstrap/modules/blocknewproducts/blocknewproducts.tpl</file>
+            <file>file:/var/www/html/prestashop16/modules/blockpromotionproducts/views/templates/hook/blockpromotionproducts.tpl</file>
+            <file>file:/var/www/html/prestashop16/themes/default-bootstrap/modules/blockcms/blockcms.tpl</file>
+            <file>file:/var/www/html/prestashop16/config/config.inc.php</file>
+            <file>file:/var/www/html/prestashop16/config/settings.inc.php</file>
+            <file>file:/var/www/html/prestashop16/themes/default-bootstrap/header.tpl</file>
+            <file>file:/var/www/html/prestashop16/modules/blockcms/blockcms.php</file>
+            <file>file:/var/www/html/prestashop16/themes/default-bootstrap/breadcrumb.tpl</file>
+            <file>file:/var/www/html/prestashop16/themes/default-bootstrap/category.tpl</file>
+            <file>file:/var/www/html/prestashop16/themes/default-bootstrap/css/autoload/uniform.default.css</file>
         </group>
     </open-files>
 </project-private>

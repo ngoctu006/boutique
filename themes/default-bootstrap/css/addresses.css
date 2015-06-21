@@ -12,5 +12,15 @@
   margin: 14px 0 6px 0; }
   .address li.address_update a {
     margin: 0 10px 0 0; }
-
+  .bloc_adresses .col-sm-6{
+      float : left;
+      width: 410px;
+  }
+  .bloc_adresses .col-sm-6:after{
+      content:'';
+      display:table;
+  }
+  .main-page-indent{
+      clear:both;
+  }
 /*# sourceMappingURL=addresses.css.map */

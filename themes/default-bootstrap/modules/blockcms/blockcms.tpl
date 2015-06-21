@@ -118,6 +118,7 @@
                                             </a>
                                     </li>
                                     {/if}
+                                    <li><a href="{$link->getCMSLink('7')}">{l s='résultats' mod='blockcms'}</a></li>
                                     {if $show_sitemap}
                                     <li>
                                             <a href="{$link->getPageLink('sitemap')|escape:'html':'UTF-8'}" title="{l s='Sitemap' mod='blockcms'}">

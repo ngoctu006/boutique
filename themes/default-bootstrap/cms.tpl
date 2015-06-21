@@ -38,6 +38,9 @@
 		</div>
 	{/if}
 	<div class="rte{if $content_only} content_only{/if}">
+            <h1 class="st-title1">
+                <span>{$cms->meta_title}</span>
+            </h1>
 		{$cms->content}
 	</div>
 {elseif isset($cms_category)}
