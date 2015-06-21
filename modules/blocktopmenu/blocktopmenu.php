@@ -738,6 +738,9 @@ class Blocktopmenu extends Module
 		$html = $this->display(__FILE__, 'blocktopmenu.tpl', $this->getCacheId());
 		return $html;
 	}
+        public function hookDisplayMenu($params){
+            return $this->hookDisplayTop($params);
+        }
 
 	public function hookDisplayNav($params)
 	{

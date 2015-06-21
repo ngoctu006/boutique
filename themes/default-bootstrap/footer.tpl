@@ -29,21 +29,31 @@
 						<div id="right_column" class="col-xs-12 col-sm-{$right_column_size|intval} column">{$HOOK_RIGHT_COLUMN}</div>
 					{/if *}
 					</div><!-- .row -->
+                                        <div id="box-shadow-right"></div>
 				</div><!-- #columns -->
+                                
 			</div><!-- .columns-container -->
 			{if isset($HOOK_FOOTER)}
 				<!-- Footer -->
                                 <div class="footer-top">
                                     <div class="container">
                                         <div class="row">
-                                            
+                                            {$HOOK_TOP_FOOTER}
                                         </div>
                                     </div>
                                 </div>
 				<div class="footer-container">
 					<footer id="footer"  class="container">
-						<div class="row">{$HOOK_FOOTER}</div>
+						<div class="row">
+                                                    {$HOOK_FOOTER}
+                                                    <div class="wrap-adv3">
+                                                        <img src="{$base_dir}/images/tn.png" /><br />
+                                                        <p class="text-1">{l s="pour les colis de plus de 30 kilos."}</p>
+                                                        <img src="{$base_dir}/images/icon-paypal.png" /><br />
+                                                    </div>
+                                                </div>
 					</footer>
+                                    <p class="power-by">© 2015 Boutique Nounou. All droits réservés .</p>
 				</div><!-- #footer -->
 			{/if}
 		</div><!-- #page -->

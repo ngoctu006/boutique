@@ -27,8 +27,8 @@
     <a href="{$link->getPageLink('order', true, NULL, "step=3")|escape:'html':'UTF-8'}" title="{l s='Go back to the Checkout' mod='bankwire'}">{l s='Checkout' mod='bankwire'}</a><span class="navigation-pipe">{$navigationPipe}</span>{l s='Bank-wire payment' mod='bankwire'}
 {/capture}
 
-<h1 class="page-heading">
-    {l s='Order summary' mod='bankwire'}
+<h1 class="page-heading st-title1">
+    <span>{l s='Order summary' mod='bankwire'}</span>
 </h1>
 
 {assign var='current_step' value='payment'}

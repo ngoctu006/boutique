@@ -26,7 +26,7 @@
 	{assign var='current_step' value='address'}
 	{capture name=path}{l s='Addresses'}{/capture}
 	{assign var="back_order_page" value="order.php"}
-	<h1 class="page-heading">{l s='Addresses'}</h1>
+        <h1 class="page-heading st-title1"><span>{l s='Addresses'}</span></h1>
 	{include file="$tpl_dir./order-steps.tpl"}
 	{include file="$tpl_dir./errors.tpl"}
 		<form action="{$link->getPageLink($back_order_page, true)|escape:'html':'UTF-8'}" method="post">
@@ -76,7 +76,8 @@
 			</div>
 		</div>
 	</div> <!-- end row -->
-	<div class="row">
+	  <div class="row" id="order-address">
+
 		<div class="col-xs-12 col-sm-6"{if $cart->isVirtualCart()} style="display:none;"{/if}>
 			<ul class="address item box" id="address_delivery">
 			</ul>

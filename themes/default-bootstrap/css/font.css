@@ -1,0 +1,55 @@
+
+@font-face {
+  font-family: 'Tangerine';
+  src: url('../fonts/Tangerine.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tangerine';
+  src:  url('../fonts/Tangerine.woff') format('woff'), url('../fonts/Tangerine.ttf')  format('truetype'), url('../fonts/Tangerine.svg#Tangerine') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CreteRound-Regular';
+  src: url('../fonts/CreteRound-Regular.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CreteRound-Regular';
+  src:  url('../fonts/CreteRound-Regular.woff') format('woff'), url('../fonts/CreteRound-Regular.ttf')  format('truetype'), url('../fonts/CreteRound-Regular.svg#CreteRound-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Regular';
+  src: url('../fonts/SourceSansPro-Regular.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Regular';
+  src:  url('../fonts/SourceSansPro-Regular.otf')  format('opentype'),
+  url('../fonts/SourceSansPro-Regular.woff') format('woff'), url('../fonts/SourceSansPro-Regular.ttf')  format('truetype'), url('../fonts/SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CreteRound-Italic';
+  src: url('../fonts/CreteRound-Italic.eot?#iefix') format('embedded-opentype'),  url('../fonts/CreteRound-Italic.woff') format('woff'), url('../fonts/CreteRound-Italic.ttf')  format('truetype'), url('../fonts/CreteRound-Italic.svg#CreteRound-Italic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+

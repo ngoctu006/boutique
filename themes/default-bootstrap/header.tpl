@@ -39,8 +39,8 @@
 {/if}
 		<meta name="generator" content="PrestaShop" />
 		<meta name="robots" content="{if isset($nobots)}no{/if}index,{if isset($nofollow) && $nofollow}no{/if}follow" />
-		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
+<!--		<meta name="viewport" content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />-->
 		<link rel="icon" type="image/vnd.microsoft.icon" href="{$favicon_url}?{$img_update_time}" />
 		<link rel="shortcut icon" type="image/x-icon" href="{$favicon_url}?{$img_update_time}" />
 {if isset($css_files)}
@@ -74,7 +74,9 @@
 				<header id="header">
 					<div>
                                             <div class="container">
+                                                <div id="box-shadow-left"></div>
 						<div class="row">
+                                                    <img id="top-flower" src="{$base_dir}/images/top-flower.png">
                                                     <div id="header_logo">
 							<a href="{if $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}" title="{$shop_name|escape:'html':'UTF-8'}">
                                                            <img class="logo img-responsive" src="{$logo_url}" alt="{$shop_name|escape:'html':'UTF-8'}"{if isset($logo_image_width) && $logo_image_width} width="{$logo_image_width}"{/if}{if isset($logo_image_height) && $logo_image_height} height="{$logo_image_height}"{/if}/>
@@ -82,17 +84,22 @@
 						    </div>
 						   {if isset($HOOK_TOP)}{$HOOK_TOP}{/if}
                                                     <div class="block-link-cart">
-                                                        <a href="#" title="view cart">
-                                                             Consultez votre Panier 
+                                                        <a href="{$link->getPageLink("order.php", true)|escape:'html'}" title="view cart">
+                                                             {l s='Consultez votre Panier'} 
                                                         </a>
                                                      </div>
+                                                    <div class="wrap-top-menu">
+                                                        {$HOOK_DISPLAY_MENU}
+                                                    </div>    
 						</div>
+                                                <div id="box-shadow-right"></div>
                                             </div>
 					</div>
 				</header>
 			</div>
 			<div class="columns-container">
 				<div id="columns" class="container">
+                                    <div id="box-shadow-left"></div>
                                         {if $page_name =='index'}
                                             <div id="slider_row" class="row">
                                                     <div id="top_column" class="center_column">

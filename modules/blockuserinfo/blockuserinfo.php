@@ -76,9 +76,13 @@ class BlockUserInfo extends Module
 	{
 		$this->context->controller->addCSS(($this->_path).'blockuserinfo.css', 'all');
 	}
-
 	public function hookDisplayNav($params)
 	{
-		return $this->display(__FILE__, 'nav.tpl');
+		return $this->hookDisplayTop($params);
 	}
+	public function hookDisplayMenu($params)
+	{
+		return $this->hookDisplayTop($params);
+	}
+        
 }

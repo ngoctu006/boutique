@@ -62,9 +62,6 @@
 					{if isset($tag) AND $tag AND !is_array($tag)}
 						<input type="hidden" name="tag" value="{$tag|escape:'html':'UTF-8'}" />
 					{/if}
-	                <button type="submit" class="btn btn-default button exclusive-medium">
-	                	<span>{l s='Show all'}</span>
-	                </button>
 					{if is_array($requestNb)}
 						{foreach from=$requestNb item=requestValue key=requestKey}
 							{if $requestKey != 'requestUrl' && $requestKey != 'p'}
@@ -82,13 +79,13 @@
 					{assign var='p_previous' value=$p-1}
 					<li id="pagination_previous{if isset($paginationId)}_{$paginationId}{/if}" class="pagination_previous">
 						<a {$no_follow_text} href="{$link->goPage($requestPage, $p_previous)}" rel="prev">
-							<i class="icon-chevron-left"></i> <b>{l s='Previous'}</b>
+							<i class="icon-chevron-left"></i> <b>{l s='Prev'}</b>
 						</a>
 					</li>
 				{else}
 					<li id="pagination_previous{if isset($paginationId)}_{$paginationId}{/if}" class="disabled pagination_previous">
 						<span>
-							<i class="icon-chevron-left"></i> <b>{l s='Previous'}</b>
+							<i class="icon-chevron-left"></i> <b>{l s='Prev'}</b>
 						</span>
 					</li>
 				{/if}

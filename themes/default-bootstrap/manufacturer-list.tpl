@@ -25,8 +25,10 @@
 
 {capture name=path}{l s='Manufacturers:'}{/capture}
 
-<h1 class="page-heading product-listing">
-	{l s='Brands'}
+<h1 class="page-heading st-title1"><span>
+	{l s='Brands'}</span>
+</h1>
+<p>
     {strip}
 		<span class="heading-counter">
 			{if $nbManufacturers == 0}{l s='There are no manufacturers.'}
@@ -39,7 +41,7 @@
 			{/if}
 		</span>
     {/strip}
-</h1>
+</p>
 {if isset($errors) AND $errors}
 	{include file="$tpl_dir./errors.tpl"}
 {else}

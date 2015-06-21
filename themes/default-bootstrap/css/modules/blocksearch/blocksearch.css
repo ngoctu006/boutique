@@ -9,7 +9,7 @@
     float: left;
     width: 100%; }
   #search_block_top .btn.button-search {
-    background: #333;
+    background: #a0cf67;
     display: block;
     position: absolute;
     top: 0;
@@ -18,11 +18,14 @@
     color: #fff;
     width: 50px;
     text-align: center;
-    padding: 3px 0 6px 0; }
+    background-image: url(http://localhost/boutique/boutique/images/search.png);
+    padding: 20px 0 12px 0; 
+    background-repeat: no-repeat;
+    background-position: 12px 5px;
+}
     #search_block_top .btn.button-search span {
       display: none; }
     #search_block_top .btn.button-search:before {
-      content: "\f002";
       display: block;
       font-family: "FontAwesome";
       font-size: 17px;
@@ -34,8 +37,9 @@
     display: inline;
     padding: 13px 60px 13px 13px;
     height: 33px;
-    background: #fbfbfb;
-    margin-right: 1px; }
+    margin-right: 1px; 
+    border: 1px solid #a0cf67;
+}
 
 .ac_results {
   background: #fff;

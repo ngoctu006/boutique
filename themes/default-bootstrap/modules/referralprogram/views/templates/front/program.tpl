@@ -24,7 +24,7 @@
 *}
 {capture name=path}<a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}" title="{l s='Manage my account' mod='referralprogram'}" rel="nofollow">{l s='My account' mod='referralprogram'}</a><span class="navigation-pipe">{$navigationPipe}</span><span class="navigation_page">{l s='Referral Program' mod='referralprogram'}</span>{/capture}
 
-<h1 class="page-heading">{l s='Referral program' mod='referralprogram'}</h1>
+<h1 class="page-heading st-title1"><span>{l s='Referral program' mod='referralprogram'}</span></h1>
 
 {if $error}
 	<p class="alert alert-danger">

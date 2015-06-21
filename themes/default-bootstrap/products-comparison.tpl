@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 {capture name=path}{l s='Product Comparison'}{/capture}
-<h1 class="page-heading">{l s='Product Comparison'}</h1>
+<h1 class="page-heading st-title1"><span>{l s='Product Comparison'}</span></h1>
 {if $hasProduct}
 	<div class="products_block table-responsive">
 		<table id="product_comparison" class="table table-bordered">

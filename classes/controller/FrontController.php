@@ -455,6 +455,8 @@ class FrontControllerCore extends Controller
 			$this->context->smarty->assign(array(
 				'HOOK_HEADER' => Hook::exec('displayHeader'),
 				'HOOK_TOP' => Hook::exec('displayTop'),
+                                'HOOK_TOP_FOOTER' => Hook::exec('displayTopFooter'),
+                                'HOOK_DISPLAY_MENU' => Hook::exec('displayMenu'),
 				'HOOK_LEFT_COLUMN' => ($this->display_column_left ? Hook::exec('displayLeftColumn') : ''),
 				'HOOK_RIGHT_COLUMN' => ($this->display_column_right ? Hook::exec('displayRightColumn', array('cart' => $this->context->cart)) : ''),
 			));
@@ -775,11 +777,13 @@ class FrontControllerCore extends Controller
 		}
 
 		$this->addCSS(_THEME_CSS_DIR_.'grid_prestashop.css', 'all');  // retro compat themes 1.5
-		$this->addCSS(_THEME_CSS_DIR_.'global.css', 'all');
+		$this->addCSS(_THEME_CSS_DIR_.'font.css', 'all');
+                $this->addCSS(_THEME_CSS_DIR_.'global.css', 'all');
 		$this->addjquery();
 		$this->addjqueryPlugin('easing');
 		$this->addJS(_PS_JS_DIR_.'tools.js');
 		$this->addJS(_THEME_JS_DIR_.'global.js');
+		$this->addJS(_THEME_JS_DIR_.'myscript.js');
 
 		// Automatically add js files from js/autoload directory in the template
 		if (@filemtime($this->getThemeDir().'js/autoload/'))

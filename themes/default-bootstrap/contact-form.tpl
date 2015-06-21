@@ -23,9 +23,27 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 {capture name=path}{l s='Contact'}{/capture}
-<h1 class="page-heading bottom-indent">
-	{l s='Customer service'} - {if isset($customerThread) && $customerThread}{l s='Your reply'}{else}{l s='Contact us'}{/if}
+<h1 class="page-heading  st-title1">
+    <span>{l s='Contact us'}</span>
 </h1>
+<p>{l s="Contactez nous pour toutes demandes d'informations sur les produits, les paiements, la livraison..."}</p>
+ <div class="wrap-discription">
+    <div class="map">
+        <img src="{$base_dir}/images/map.png">
+    </div>
+    <div class="discription-contact">
+        <h5>Voici nos coordonnées : </h5>
+          <p><span>Boutique Nounou ZA de Kervandras </span>
+            <span>56250 Sulniac </span><br/>
+            <span>Morbihan - France</span><br/>
+            <span>info@boutique-nounou.com</span><br/>
+            <span>Tel : 02.97.47.98.93 Port: 07.83.08.89.44</span>
+        <p>
+            <span>Ouvert sur rendez vous : du Mardi au Vendredi de 9h à 12h et de 14h à 18h <span><br />
+            <span>Permanence téléphonique du lundi au Vendredi de 10h00 a 12h00 et de 14h00 a 17h00 au 02.97.47.98.93<span>
+        </p>
+    </div>
+</div>   
 {if isset($confirmation)}
 	<p class="alert alert-success">{l s='Your message has been successfully sent to our team.'}</p>
 	<ul class="footer_links clearfix">
@@ -49,37 +67,23 @@
 		</li>
 	</ul>
 {else}
+    <h1 class="page-heading  st-title1">
+         <span>{l s='Contact us'}</span>
+    </h1>
 	{include file="$tpl_dir./errors.tpl"}
 	<form action="{$request_uri}" method="post" class="contact-form-box" enctype="multipart/form-data">
 		<fieldset>
-			<h3 class="page-subheading">{l s='send a message'}</h3>
 			<div class="clearfix">
 				<div class="col-xs-12 col-md-3">
-					<div class="form-group selector1">
-						<label for="id_contact">{l s='Subject Heading'}</label>
-					{if isset($customerThread.id_contact) && $customerThread.id_contact}
-							{foreach from=$contacts item=contact}
-								{if $contact.id_contact == $customerThread.id_contact}
-									<input type="text" class="form-control" id="contact_name" name="contact_name" value="{$contact.name|escape:'html':'UTF-8'}" readonly="readonly" />
-									<input type="hidden" name="id_contact" value="{$contact.id_contact}" />
-								{/if}
-							{/foreach}
-					</div>
-					{else}
-						<select id="id_contact" class="form-control" name="id_contact">
-							<option value="0">{l s='-- Choose --'}</option>
-							{foreach from=$contacts item=contact}
-								<option value="{$contact.id_contact|intval}"{if isset($smarty.request.id_contact) && $smarty.request.id_contact == $contact.id_contact} selected="selected"{/if}>{$contact.name|escape:'html':'UTF-8'}</option>
-							{/foreach}
-						</select>
-					</div>
-						<p id="desc_contact0" class="desc_contact{if isset($smarty.request.id_contact)} unvisible{/if}">&nbsp;</p>
-						{foreach from=$contacts item=contact}
-							<p id="desc_contact{$contact.id_contact|intval}" class="desc_contact contact-title{if !isset($smarty.request.id_contact) || $smarty.request.id_contact|intval != $contact.id_contact|intval} unvisible{/if}">
-								<i class="icon-comment-alt"></i>{$contact.description|escape:'html':'UTF-8'}
-							</p>
-						{/foreach}
-					{/if}
+					
+					<p class="form-group">
+						<label for="nom">{l s='Nom'}</label>
+					        <input class="form-control" type="text" id="nom" name="nom" value="{if $nom}{$nom}{/if}" />
+					</p>
+					<p class="form-group">
+						<label for="prenom">{l s='Prénom'}</label>
+					        <input class="form-control" type="text" id="prenom" name="prenom" value="{if $prenom}{$prenom}{/if}" />
+					</p>
 					<p class="form-group">
 						<label for="email">{l s='Email address'}</label>
 						{if isset($customerThread.email)}
@@ -88,59 +92,26 @@
 							<input class="form-control grey validate" type="text" id="email" name="from" data-validate="isEmail" value="{$email|escape:'html':'UTF-8'}" />
 						{/if}
 					</p>
-					{if !$PS_CATALOG_MODE}
-						{if (!isset($customerThread.id_order) || $customerThread.id_order > 0)}
-							<div class="form-group selector1">
-								<label>{l s='Order reference'}</label>
-								{if !isset($customerThread.id_order) && isset($is_logged) && $is_logged}
-									<select name="id_order" class="form-control">
-										<option value="0">{l s='-- Choose --'}</option>
-										{foreach from=$orderList item=order}
-											<option value="{$order.value|intval}"{if $order.selected|intval} selected="selected"{/if}>{$order.label|escape:'html':'UTF-8'}</option>
-										{/foreach}
-									</select>
-								{elseif !isset($customerThread.id_order) && empty($is_logged)}
-									<input class="form-control grey" type="text" name="id_order" id="id_order" value="{if isset($customerThread.id_order) && $customerThread.id_order|intval > 0}{$customerThread.id_order|intval}{else}{if isset($smarty.post.id_order) && !empty($smarty.post.id_order)}{$smarty.post.id_order|escape:'html':'UTF-8'}{/if}{/if}" />
-								{elseif $customerThread.id_order|intval > 0}
-									<input class="form-control grey" type="text" name="id_order" id="id_order" value="{if isset($customerThread.reference) && $customerThread.reference}{$customerThread.reference|escape:'html':'UTF-8'}{else}{$customerThread.id_order|intval}{/if}" readonly="readonly" />
-								{/if}
-							</div>
-						{/if}
-						{if isset($is_logged) && $is_logged}
-							<div class="form-group selector1">
-								<label class="unvisible">{l s='Product'}</label>
-								{if !isset($customerThread.id_product)}
-									{foreach from=$orderedProductList key=id_order item=products name=products}
-										<select name="id_product" id="{$id_order}_order_products" class="unvisible product_select form-control"{if !$smarty.foreach.products.first} style="display:none;"{/if}{if !$smarty.foreach.products.first} disabled="disabled"{/if}>
-											<option value="0">{l s='-- Choose --'}</option>
-											{foreach from=$products item=product}
-												<option value="{$product.value|intval}">{$product.label|escape:'html':'UTF-8'}</option>
-											{/foreach}
-										</select>
-									{/foreach}
-								{elseif $customerThread.id_product > 0}
-									<input  type="hidden" name="id_product" id="id_product" value="{$customerThread.id_product|intval}" readonly="readonly" />
-								{/if}
-							</div>
-						{/if}
-					{/if}
-					{if $fileupload == 1}
-						<p class="form-group">
-							<label for="fileUpload">{l s='Attach File'}</label>
-							<input type="hidden" name="MAX_FILE_SIZE" value="{if isset($max_upload_size) && $max_upload_size}{$max_upload_size|intval}{else}2000000{/if}" />
-							<input type="file" name="fileUpload" id="fileUpload" class="form-control" />
-						</p>
-					{/if}
+					<p class="form-group">
+						<label for="telephone">{l s='Téléphone'}</label>
+					        <input class="form-control" type="text" id="telephone" name="telephone" value="{if $telephone}{$telephone}{/if}" />
+					</p>
+					<p class="form-group">
+						<label for="votre-message">{l s="Quel est l'objet de votre message"}</label>
+					        <input class="form-control" type="text"  name="votre-message" value="{if $votre_message}{$votre_message}{/if}" />
+
+					</p>
 				</div>
 				<div class="col-xs-12 col-md-9">
 					<div class="form-group">
-						<label for="message">{l s='Message'}</label>
+						<label for="message">{l s='Quel ét votre message'}</label>
 						<textarea class="form-control" id="message" name="message">{if isset($message)}{$message|escape:'html':'UTF-8'|stripslashes}{/if}</textarea>
 					</div>
 				</div>
 			</div>
-			<div class="submit">
-				<button type="submit" name="submitMessage" id="submitMessage" class="button btn btn-default button-medium"><span>{l s='Send'}<i class="icon-chevron-right right"></i></span></button>
+			<div class="form-group">
+                            <label></label>
+				<button type="submit" name="submitMessage" id="submitMessage" class=""><span>{l s='Valider'}</span></button>
 			</div>
 		</fieldset>
 	</form>

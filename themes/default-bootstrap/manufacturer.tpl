@@ -27,8 +27,8 @@
 {include file="$tpl_dir./errors.tpl"}
 
 {if !isset($errors) OR !sizeof($errors)}
-	<h1 class="page-heading product-listing">
-		{l s='List of products by manufacturer'}&nbsp;{$manufacturer->name|escape:'html':'UTF-8'}
+	<h1 class="page-heading st-title1">
+		<span>{l s='List of products by manufacturer'}&nbsp;{$manufacturer->name|escape:'html':'UTF-8'}</span>
 	</h1>
 	{if !empty($manufacturer->description) || !empty($manufacturer->short_description)}
 		<div class="description_box rte">

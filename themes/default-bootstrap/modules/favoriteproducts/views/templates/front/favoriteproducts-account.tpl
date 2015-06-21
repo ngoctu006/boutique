@@ -31,7 +31,7 @@
 {/capture}
 
 <div id="favoriteproducts_block_account">
-	<h1 class="page-heading">{l s='My favorite products' mod='favoriteproducts'}</h1>
+	<h1 class="page-heading st-title1"><span>{l s='My favorite products' mod='favoriteproducts'}</span></h1>
 	{if $favoriteProducts}
     	<ul class="row">
 			{foreach from=$favoriteProducts item=favoriteProduct}

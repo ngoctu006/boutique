@@ -25,7 +25,7 @@
 
 {capture name=path}{l s='Shipping' mod='cashondelivery'}{/capture}
 
-<h1 class="page-heading">{l s='Order summary' mod='cashondelivery'}</h1>
+<h1 class="page-heading st-title1"><span>{l s='Order summary' mod='cashondelivery'}</span></h1>
 
 {assign var='current_step' value='payment'}
 {include file="$tpl_dir./order-steps.tpl"}

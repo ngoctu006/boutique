@@ -25,7 +25,7 @@
 
 {capture name=path}{l s='Suppliers:'}{/capture}
 
-<h1 class="page-heading product-listing">{l s='Suppliers:'}
+<h1 class="page-heading">{l s='Suppliers:'}
 	{strip}
 		<span class="heading-counter">
 			{if $nbSuppliers == 0}{l s='There are no suppliers.'}

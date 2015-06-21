@@ -25,7 +25,7 @@
 
 {capture name=path}<a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}" title="{l s='Manage my account' mod='loyalty'}" rel="nofollow">{l s='My account' mod='loyalty'}</a><span class="navigation-pipe">{$navigationPipe}</span><span class="navigation_page">{l s='My loyalty points' mod='loyalty'}</span>{/capture}
 
-<h1 class="page-heading">{l s='My loyalty points' mod='loyalty'}</h1>
+<h1 class="page-heading st-title1"><span>{l s='My loyalty points' mod='loyalty'}</span></h1>
 
 {if $orders}
 <div class="block-center" id="block-history">

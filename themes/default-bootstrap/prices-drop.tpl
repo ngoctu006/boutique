@@ -25,7 +25,7 @@
 
 {capture name=path}{l s='Price drop'}{/capture}
 
-<h1 class="page-heading product-listing">{l s='Price drop'}</h1>
+<h1 class="page-heading st-title1"><span>{l s='Price drop'}</span></h1>
 
 {if $products}
 	<div class="content_sortPagiBar">

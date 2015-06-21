@@ -26,7 +26,7 @@
 {capture name=path}{l s='Sitemap'}{/capture}
 
 <h1 class="page-heading">
-    {l s='Sitemap'}
+    <span>{l s='Sitemap'}</span>
 </h1>
 <div id="sitemap_content" class="row">
 	<div class="col-xs-12 col-sm-6">

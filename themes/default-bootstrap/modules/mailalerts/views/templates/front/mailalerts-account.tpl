@@ -24,7 +24,7 @@
 *}
 {capture name=path}<a href="{$link->getPageLink('my-account', true)|escape:'html'}" title="{l s='Manage my account' mod='mailalerts'}" rel="nofollow">{l s='My account' mod='mailalerts'}</a><span class="navigation-pipe">{$navigationPipe}</span><span class="navigation_page">{l s='My alerts' mod='mailalerts'}</span>{/capture}
 <div id="mailalerts_block_account" class="block">
-	<h1 class="page-heading">{l s='My alerts' mod='mailalerts'}</h1>
+	<h1 class="page-heading st-title1"><span>{l s='My alerts' mod='mailalerts'}</span></h1>
 	{if $mailAlerts}
 		<ul class="products-block">
 			{foreach from=$mailAlerts item=mailAlert name=myLoop}

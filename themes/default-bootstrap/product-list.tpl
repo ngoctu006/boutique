@@ -29,7 +29,7 @@
             {foreach from=$products item=product name=products}
                 <li {if $item % 3 == 0} class="nomargin" {/if}>
                             <a class="products-block-image" href="{$product.link|escape:'html'}" title="{$product.legend|escape:html:'UTF-8'}">
-                                <img class="replace-2x img-responsive" src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'small_default')|escape:'html'}" alt="{$product.name|escape:html:'UTF-8'}" />
+                                <img class="replace-2x img-responsive" src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')|escape:'html'}" alt="{$product.name|escape:html:'UTF-8'}" />
                             </a>
                             <div class="product-content">
                                 <h5>
@@ -68,6 +68,7 @@
                                 {/if}
                             </div>
                 </li>
+                {$item = $item+1}
             {/foreach}
 	</ul>
 {/if}

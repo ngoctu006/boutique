@@ -25,8 +25,8 @@
 
 {capture name=path}{l s='Our stores'}{/capture}
 
-<h1 class="page-heading">
-	{l s='Our stores'}
+<h1 class="page-heading st-title1">
+	<span>{l s='Our stores'}</span>
 </h1>
 
 {if $simplifiedStoresDiplay}

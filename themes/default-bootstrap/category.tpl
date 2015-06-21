@@ -69,7 +69,7 @@
                   {/if}
             </div>*}
 		{/if}
-		<h1 class="page-heading{if (isset($subcategories) && !$products) || (isset($subcategories) && $products) || !isset($subcategories) && $products} product-listing{/if}"><span class="cat-name">{$category->name|escape:'html':'UTF-8'}{if isset($categoryNameComplement)}&nbsp;{$categoryNameComplement|escape:'html':'UTF-8'}{/if}</span></h1>
+		<h1 class="st-title1 page-heading{if (isset($subcategories) && !$products) || (isset($subcategories) && $products) || !isset($subcategories) && $products} product-listing{/if}"><span class="cat-name">{$category->name|escape:'html':'UTF-8'}{if isset($categoryNameComplement)}&nbsp;{$categoryNameComplement|escape:'html':'UTF-8'}{/if}</span></h1>
 		{*{if isset($subcategories)}
                      {if (isset($display_subcategories) && $display_subcategories eq 1) || !isset($display_subcategories) }
                        <!-- Subcategories -->
@@ -112,7 +112,7 @@
 			<div class="content_sortPagiBar">
 				<div class="bottom-pagination-content clearfix">
                                    {* include file="./product-compare.tpl" paginationId='bottom' *}
-                                   {include file="./pagination.tpl" paginationId='bottom'}
+                                   {* include file="./pagination.tpl" paginationId='bottom' *}
 				</div>
 			</div>
 		{/if}

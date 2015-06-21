@@ -24,8 +24,10 @@
 *}
 {capture name=path}<a href="{$link->getPageLink('my-account', true)|escape:'html':'UTF-8'}">{l s='My account'}</a><span class="navigation-pipe">{$navigationPipe}</span><span class="navigation_page">{l s='My vouchers'}</span>{/capture}
 
-<h1 class="page-heading">
+<h1 class="page-heading st-title1">
+    <span>
 	{l s='My vouchers'}
+        </span>
 </h1>
 
 {if isset($cart_rules) && count($cart_rules) && $nb_cart_rules}

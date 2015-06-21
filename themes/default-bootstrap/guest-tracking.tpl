@@ -25,7 +25,7 @@
 
 {capture name=path}{l s='Guest Tracking'}{/capture}
 
-<h1 class="page-heading">{l s='Guest Tracking'}</h1>
+<h1 class="page-heading st-title1"><span>{l s='Guest Tracking'}</span></h1>
 
 {if isset($order_collection)}
 	{foreach $order_collection as $order}

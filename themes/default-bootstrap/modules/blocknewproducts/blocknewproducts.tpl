@@ -36,7 +36,7 @@
                 {foreach from=$new_products item=newproduct name=myLoop}
                     <li {if $item % 3 == 0} class="nomargin" {/if}>
                         <a class="products-block-image" href="{$newproduct.link|escape:'html'}" title="{$newproduct.legend|escape:html:'UTF-8'}">
-                            <img class="replace-2x img-responsive" src="{$link->getImageLink($newproduct.link_rewrite, $newproduct.id_image, 'small_default')|escape:'html'}" alt="{$newproduct.name|escape:html:'UTF-8'}" />
+                            <img class="replace-2x img-responsive" src="{$link->getImageLink($newproduct.link_rewrite, $newproduct.id_image, 'home_default')|escape:'html'}" alt="{$newproduct.name|escape:html:'UTF-8'}" />
                         </a>
                         <div class="product-content">
                         	<h5>

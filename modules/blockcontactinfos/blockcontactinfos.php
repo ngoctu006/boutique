@@ -35,6 +35,7 @@ class Blockcontactinfos extends Module
 		'BLOCKCONTACTINFOS_ADDRESS',
 		'BLOCKCONTACTINFOS_PHONE',
 		'BLOCKCONTACTINFOS_EMAIL',
+		'BLOCKCONTACTINFOS_PORT',
 	);
 
 	public function __construct()
@@ -58,6 +59,7 @@ class Blockcontactinfos extends Module
 		Configuration::updateValue('BLOCKCONTACTINFOS_ADDRESS', trim(preg_replace('/ +/', ' ', Configuration::get('PS_SHOP_ADDR1').' '.Configuration::get('PS_SHOP_ADDR2')."\n".Configuration::get('PS_SHOP_CODE').' '.Configuration::get('PS_SHOP_CITY')."\n".Country::getNameById(Configuration::get('PS_LANG_DEFAULT'), Configuration::get('PS_SHOP_COUNTRY_ID')))));
 		Configuration::updateValue('BLOCKCONTACTINFOS_PHONE', Configuration::get('PS_SHOP_PHONE'));
 		Configuration::updateValue('BLOCKCONTACTINFOS_EMAIL', Configuration::get('PS_SHOP_EMAIL'));
+		Configuration::updateValue('BLOCKCONTACTINFOS_PORT', Configuration::get('PS_SHOP_PORT'));
 		$this->_clearCache('blockcontactinfos.tpl');
 		return (parent::install() && $this->registerHook('header') && $this->registerHook('footer'));
 	}
@@ -95,6 +97,10 @@ class Blockcontactinfos extends Module
 				$this->smarty->assign(strtolower($field), Configuration::get($field));
 		return $this->display(__FILE__, 'blockcontactinfos.tpl', $this->getCacheId());
 	}
+	public function hookDisplayTopFooter($params)
+	{	
+		return $this->hookFooter($params);
+	}
 	
 	public function renderForm()
 	{
@@ -119,6 +125,11 @@ class Blockcontactinfos extends Module
 						'type' => 'text',
 						'label' => $this->l('Phone number'),
 						'name' => 'BLOCKCONTACTINFOS_PHONE',
+					),
+					array(
+						'type' => 'text',
+						'label' => $this->l('Port number'),
+						'name' => 'BLOCKCONTACTINFOS_PORT',
 					),
 					array(
 						'type' => 'text',

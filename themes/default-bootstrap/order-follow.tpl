@@ -35,8 +35,8 @@
 	</span>
 {/capture}
 
-<h1 class="page-heading bottom-indent">
-	{l s='Return Merchandise Authorization (RMA)'}
+<h1 class="page-heading st-title1">
+	<span>{l s='Return Merchandise Authorization (RMA)'}</span>
 </h1>
 {if isset($errorQuantity) && $errorQuantity}
 	<p class="error">

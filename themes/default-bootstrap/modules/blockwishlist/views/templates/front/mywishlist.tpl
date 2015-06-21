@@ -36,7 +36,7 @@
 		</span>
 	{/capture}
 
-	<h1 class="page-heading">{l s='My wishlists' mod='blockwishlist'}</h1>
+	<h1 class="page-heading st-title1"><span>{l s='My wishlists' mod='blockwishlist'}</span></h1>
 
 	{include file="$tpl_dir./errors.tpl"}
 
