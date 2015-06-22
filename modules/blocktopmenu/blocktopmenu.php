@@ -466,7 +466,6 @@ class Blocktopmenu extends Module
 		$menu_items = $this->getMenuItems();
 		$id_lang = (int)$this->context->language->id;
 		$id_shop = (int)Shop::getContextShopID();
-
 		foreach ($menu_items as $item)
 		{
 			if (!$item)
@@ -474,7 +473,6 @@ class Blocktopmenu extends Module
 
 			preg_match($this->pattern, $item, $value);
 			$id = (int)substr($item, strlen($value[1]), strlen($item));
-
 			switch (substr($item, 0, strlen($value[1])))
 			{
 				case 'CAT':
@@ -564,13 +562,18 @@ class Blocktopmenu extends Module
 					{
 						if (!isset($link[0]['label']) || ($link[0]['label'] == ''))
 						{
+
 							$default_language = Configuration::get('PS_LANG_DEFAULT');
 							$link = MenuTopLinks::get($link[0]['id_linksmenutop'], $default_language, (int)Shop::getContextShopID());
 						}
-						$this->_menu .= '<li><a href="'.Tools::HtmlEntitiesUTF8($link[0]['link']).'"'.(($link[0]['new_window']) ? ' onclick="return !window.open(this.href);"': '').' title="'.Tools::safeOutput($link[0]['label']).'">'.Tools::safeOutput($link[0]['label']).'</a></li>'.PHP_EOL;
+						/*edit by*/
+						if($this->page_name == preg_replace ("#[^a-zA-Z0-9 ]#",'', strstr($link[0]['link'], '='))){
+							$selected1 = 'sfHoverForce';
+						}
+						$this->_menu .= '<li '.(($selected1) ? "class='$selected1'" : "").'><a href="'.Tools::HtmlEntitiesUTF8($link[0]['link']).'"'.(($link[0]['new_window']) ? ' onclick="return !window.open(this.href);"': '').' title="'.Tools::safeOutput($link[0]['label']).'">'.Tools::safeOutput($link[0]['label']).'</a></li>'.PHP_EOL;
 					}
-					break;
 			}
+
 		}
 	}
 
@@ -714,6 +717,7 @@ class Blocktopmenu extends Module
 
 	public function hookDisplayTop($param)
 	{
+
 		$this->user_groups =  ($this->context->customer->isLogged() ? $this->context->customer->getGroups() : array(Configuration::get('PS_UNIDENTIFIED_GROUP')));
 		$this->page_name = Dispatcher::getInstance()->getController();
 		if (!$this->isCached('blocktopmenu.tpl', $this->getCacheId()))

@@ -68,7 +68,7 @@
 	</ul>
 {else}
     <h1 class="page-heading  st-title1">
-         <span>{l s='Contact us'}</span>
+         <span>{l s='Vous pouvez nous laisser un message'}</span>
     </h1>
 	{include file="$tpl_dir./errors.tpl"}
 	<form action="{$request_uri}" method="post" class="contact-form-box" enctype="multipart/form-data">

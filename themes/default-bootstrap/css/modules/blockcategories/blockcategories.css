@@ -111,6 +111,9 @@
           #categories_block_top .sf-menu > li > ul > .category_thumb img {
             display: inline-block;
             width: 33%; }
+        #categories_block_left li a.selected {
+          color: #a0cf67;
+        }
       #categories_block_top .sf-menu > li h4 a {
         font-size: 1.1em; }
         #categories_block_top .sf-menu > li h4 a:before {

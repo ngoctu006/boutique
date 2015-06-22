@@ -3243,6 +3243,7 @@ section#block_contact_infos {
     font-family: "CreteRound-Regular";
     font-size: 25px;
     margin-top: 0;
+    margin-bottom: 20px;
 }
 section#block_contact_infos ul li:first-child {
     margin-bottom: 25px;
